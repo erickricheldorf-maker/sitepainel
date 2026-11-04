@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Orders arrive from the separate store site via POST /api/public/pedidos (validated, status forced to pendente); the panel reads/updates the `pedidos` table only for signed-in users. Why: the store is a different project and cannot share browser storage.
+- Never create auth users by inserting into `auth.users` directly; GoTrue sign-in on such rows fails with 500 "Database error querying schema". Create accounts through the auth `/auth/v1/signup` endpoint with the publishable key instead, then mark `email_confirmed_at = now()` via SQL when instant sign-in is needed.
