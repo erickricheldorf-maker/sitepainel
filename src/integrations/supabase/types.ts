@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      pedidos: {
+        Row: {
+          created_at: string
+          equipment: string
+          id: string
+          part_name: string
+          photo_data_url: string | null
+          reference_code: string
+          serial_number: string
+          status: string
+          symptoms: string
+          updated_at: string
+          urgency: string
+        }
+        Insert: {
+          created_at?: string
+          equipment: string
+          id?: string
+          part_name: string
+          photo_data_url?: string | null
+          reference_code?: string
+          serial_number?: string
+          status?: string
+          symptoms?: string
+          updated_at?: string
+          urgency?: string
+        }
+        Update: {
+          created_at?: string
+          equipment?: string
+          id?: string
+          part_name?: string
+          photo_data_url?: string | null
+          reference_code?: string
+          serial_number?: string
+          status?: string
+          symptoms?: string
+          updated_at?: string
+          urgency?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
