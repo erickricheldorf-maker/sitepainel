@@ -134,7 +134,10 @@ function Painel({ email }: { email: string }) {
       .from("pedidos")
       .update({ status, updated_at: new Date().toISOString() })
       .eq("id", p.id);
-    if (error) return toast.error("Não foi possível atualizar.");
+    if (error) {
+      toast.error("Não foi possível atualizar.");
+      return;
+    }
     toast.success(`Pedido marcado como ${STATUS_LABELS[status]}`);
     setAberto(null);
     carregar();

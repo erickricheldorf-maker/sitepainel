@@ -19,5 +19,5 @@ export const URGENCIES: Urgency[] = ["baixa", "media", "critica"];
 
 export function nextStatus(s: Status): Status | null {
   const i = STATUS_ORDER.indexOf(s);
-  return i < STATUS_ORDER.length - 1 ? STATUS_ORDER[i + 1] : null;
+  return STATUS_ORDER[i + 1] ?? null;
 }
