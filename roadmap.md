@@ -1,0 +1,3 @@
+- [ ] Melhorar o visual do acesso e do painel, mantendo suas funções.
+- [ ] Remover somente os quatro pedidos de demonstração.
+- [ ] Verificar acesso, filtros e tela vazia no computador e celular.
