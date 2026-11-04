@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Orders arrive from the separate store site via POST /api/public/pedidos (validated, status forced to pendente); the panel reads/updates the `pedidos` table only for signed-in users. Why: the store is a different project and cannot share browser storage.
